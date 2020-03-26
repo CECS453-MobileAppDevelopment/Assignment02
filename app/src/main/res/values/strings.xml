@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Assignment02</string>
+
+    /* Login Page Values */
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="btn_login">Login</string>
+
+    /* Sign Up Page Values */
+    <string name="signup_username">Username</string>
+    <string name="signup_password">Password</string>
+    <string name="signup_password_check">Retype Password</string>
+    <string name="signup_email">Email</string>
+    <string name="signup_phone">Phone</string>
+    <string name="btn_register">Register</string>
+
+    /* Logged In Page Values */
+    <string name="logged_in_welcome">Welcome</string>
+
+</resources>
