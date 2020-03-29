@@ -70,7 +70,7 @@ public class SignUpPage extends AppCompatActivity {
     /* Validates the username field for uniqueness */
     private boolean uniqueUsername() {
         for(User user: userList) {
-            if (signupUsername.getEditText().getText().toString().equals(user.getUsername())) {
+            if (signupUsername.getEditText().getText().toString().equalsIgnoreCase(user.getUsername())) {
                 return false;
             }
         }

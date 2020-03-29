@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 if (validateLogin()) {
                     Intent intent = new Intent(MainActivity.this, LoggedInPage.class);
                     //username sent to logged in activity
-                    intent.putExtra(EXTRA_USERNAME, loginUsername.getEditText().getText().toString().trim());
+                    intent.putExtra(EXTRA_USERNAME, loginUsername.getEditText().getText().toString().trim().toLowerCase());
                     startActivity(intent);
                 } else {
                     loginPassword.getEditText().getText().clear();
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean validateLogin() {
         for(User user: userList) {
             Log.d("UserPrint", user.toString());
-            if (loginUsername.getEditText().getText().toString().trim().equals(user.getUsername())
+            if (loginUsername.getEditText().getText().toString().trim().equalsIgnoreCase(user.getUsername())
                     && loginPassword.getEditText().getText().toString().equals(user.getPassword())) {
                 return true; //valid login
             }
