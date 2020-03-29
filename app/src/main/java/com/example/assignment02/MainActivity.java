@@ -63,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        //clear input fields
+        loginUsername.getEditText().setText("");
+        loginPassword.getEditText().setText("");
+    }
+
     /* Loads current list of current users
      *  Uses a JSON file to pull users locally */
     private void loadUsers() {
