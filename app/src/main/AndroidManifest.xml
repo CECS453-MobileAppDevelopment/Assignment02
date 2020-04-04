@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.assignment02.LoggedInPage"
+        <activity android:name="com.example.assignment02.VehiclePage"
             android:parentActivityName="com.example.assignment02.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
