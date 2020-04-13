@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (validateLogin()) {
-                    Intent intent = new Intent(MainActivity.this, LoggedInPage.class);
+                    Intent intent = new Intent(MainActivity.this, VehiclePage.class);
                     //username sent to logged in activity
                     intent.putExtra(EXTRA_USERNAME, loginUsername.getEditText().getText().toString().trim().toLowerCase());
                     startActivity(intent);
@@ -67,8 +67,9 @@ public class MainActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
         //clear input fields
-        loginUsername.getEditText().setText("");
-        loginPassword.getEditText().setText("");
+        //TODO:Remove login info
+        loginUsername.getEditText().setText("juan");
+        loginPassword.getEditText().setText("1234");
     }
 
     /* Loads current list of current users
