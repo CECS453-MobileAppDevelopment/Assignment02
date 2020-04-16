@@ -8,37 +8,19 @@
     tools:context=".VehiclePage">
 
     <Spinner
-        android:id="@+id/spinner_view"
+        android:id="@+id/spinner_vehicle_make"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="@color/colorPrimaryDark"
         style="@android:style/Widget.Spinner.DropDown"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center">
+    <Spinner
+        android:id="@+id/spinner_vehicle_model"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Spinner.DropDown"/>
 
-        <TextView
-            android:id="@+id/logged_in_welcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/logged_in_welcome"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+    
 
-        <TextView
-            android:id="@+id/logged_in_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
 
 
 
