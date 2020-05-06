@@ -1,4 +1,13 @@
-// Author: Juan Pasillas
+/*
+ * @author Juan Carlos Pasillas
+ * StudentID: 017350864
+ * California State University, Long Beach
+ * CECS 453 Section 05
+ * Professor: Arjang Fahim
+ * @date April 2020
+ *
+ * Github Project: https://github.com/CECS453-MobileAppDevelopment/Assignment02
+ */
 
 package com.example.assignment02;
 
@@ -63,15 +72,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        //clear input fields
-        //TODO:Remove login info
-        loginUsername.getEditText().setText("juan");
-        loginPassword.getEditText().setText("1234");
-    }
-
     /* Loads current list of current users
      *  Uses a JSON file to pull users locally */
     private void loadUsers() {
@@ -95,5 +95,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return false; //invalid login
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loginUsername.getEditText().setText("");
+        loginPassword.getEditText().setText("");
     }
 }
