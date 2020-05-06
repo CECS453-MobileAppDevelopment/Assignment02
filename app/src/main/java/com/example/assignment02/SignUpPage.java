@@ -1,3 +1,14 @@
+/*
+ * @author Juan Carlos Pasillas
+ * StudentID: 017350864
+ * California State University, Long Beach
+ * CECS 453 Section 05
+ * Professor: Arjang Fahim
+ * @date April 2020
+ *
+ * Github Project: https://github.com/CECS453-MobileAppDevelopment/Assignment02
+ */
+
 package com.example.assignment02;
 
 import androidx.appcompat.app.AppCompatActivity;
