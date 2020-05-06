@@ -12,19 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.example.assignment02.VehiclePage"
-            android:parentActivityName="com.example.assignment02.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.assignment02.MainActivity" />
-        </activity>
+            android:configChanges="orientation|screenSize"/>
         <activity android:name="com.example.assignment02.SignUpPage"
             android:windowSoftInputMode="adjustPan"
-            android:parentActivityName="com.example.assignment02.MainActivity">
+            android:parentActivityName="com.example.assignment02.MainActivity"
+            android:configChanges="orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.assignment02.MainActivity" />
         </activity>
-        <activity android:name="com.example.assignment02.MainActivity">
+        <activity android:name="com.example.assignment02.MainActivity"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
