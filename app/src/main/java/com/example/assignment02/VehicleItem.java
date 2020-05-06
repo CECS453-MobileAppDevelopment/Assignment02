@@ -2,14 +2,20 @@ package com.example.assignment02;
 
 public class VehicleItem {
 
+    private String vehicleID;
     private String imageURL;
     private String vehicleName;
-    private String vehicleYear;
+    private String vehicleMiles;
 
-    public VehicleItem(String image_url, String vehicle_name, String year) {
+    public VehicleItem(String id, String image_url, String vehicle_name, String miles) {
+        vehicleID = id;
         imageURL = image_url;
         vehicleName = vehicle_name;
-        vehicleYear = year;
+        vehicleMiles = miles;
+    }
+
+    public String getVehicleID() {
+        return vehicleID;
     }
 
     public String getImageURL() {
@@ -20,7 +26,7 @@ public class VehicleItem {
         return vehicleName;
     }
 
-    public String getVehicleYear() {
-        return vehicleYear;
+    public String getVehicleMiles() {
+        return vehicleMiles;
     }
 }

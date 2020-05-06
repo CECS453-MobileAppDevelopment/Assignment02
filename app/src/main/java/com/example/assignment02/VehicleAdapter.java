@@ -19,6 +19,15 @@ public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.VehicleV
 
     private Context context;
     private ArrayList<VehicleItem> vehicleItemList;
+    private OnItemClickListener itemClickListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        itemClickListener = listener;
+    }
 
     public VehicleAdapter(Context c, ArrayList<VehicleItem> exampleList) {
         context = c;
@@ -38,13 +47,13 @@ public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.VehicleV
 
         String imageURL = currentItem.getImageURL();
         String vehicleName = currentItem.getVehicleName();
-        String vehicleYear = currentItem.getVehicleYear();
+        String vehicleMiles = currentItem.getVehicleMiles();
 
         if(!imageURL.equals("")) {
             Picasso.get().load(imageURL).placeholder(R.drawable.ic_launcher_foreground).error(R.drawable.vehicle_image_na).into(holder.vehicleImage);
         }
         holder.vehicleName.setText(vehicleName);
-        holder.vehicleYear.setText(vehicleYear);
+        holder.vehicleMiles.setText(vehicleMiles);
     }
 
     @Override
@@ -56,13 +65,25 @@ public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.VehicleV
 
         public ImageView vehicleImage;
         public TextView vehicleName;
-        public TextView vehicleYear;
+        public TextView vehicleMiles;
 
         public VehicleViewHolder(@NonNull View itemView) {
             super(itemView);
             vehicleImage = itemView.findViewById(R.id.vehicle_image);
             vehicleName = itemView.findViewById(R.id.vehicle_name);
-            vehicleYear = itemView.findViewById(R.id.vehicle_year);
+            vehicleMiles = itemView.findViewById(R.id.vehicle_miles);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(itemClickListener != null) {
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION) {
+                            itemClickListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 }

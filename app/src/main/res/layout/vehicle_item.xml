@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:paddingHorizontal="8dp">
         
         <ImageView
             android:id="@+id/vehicle_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="12dp"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:src="@drawable/vehicle_image_na"/>
@@ -36,10 +36,10 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/vehicle_year"
+                android:id="@+id/vehicle_miles"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Year"
+                android:text="Miles"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="16sp" />
 
